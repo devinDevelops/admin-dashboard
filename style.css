@@ -1,0 +1,88 @@
+/* start off by collecting icon images and profile pics and add to page - commit initial html */
+/* then set borders on the major layout containers and setup page layout - commit layout*/
+/* then start one section at a time, styling the individual elements and then layout for that section - commit after each section*/
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100vh;
+  font-family: 'Kanit', arial, sans-serif;
+  letter-spacing: .05rem;
+}
+
+.page-container {
+  height: 100%;
+  display: grid;
+  grid-template: 1fr 4fr / 1.125fr 4fr;
+}
+
+nav {
+  background-color: #229D8C;
+  grid-row: 1 / -1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+ul {
+  display: grid;
+  gap: 10px;
+}
+
+ul div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 20px;
+  width: fit-content;
+}
+
+ul div:hover {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.logo h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.logo h1 span {
+  display: block;
+  font-size: 1.1rem;
+  margin-top: -10px;
+}
+
+.icon {
+  width: 25px;
+  margin-left: 20px;
+
+  /* method to change black svg to desired hex color equivalent */
+  /* https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(100%) sepia(14%) saturate(0%) hue-rotate(128deg) brightness(107%) contrast(101%);
+}
+
+header {
+  border: solid blue 2px;
+}
+
+main {
+  border: solid green 2px;
+  background-color: #f5f5f5;
+}
+
