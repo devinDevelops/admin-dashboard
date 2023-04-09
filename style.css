@@ -146,14 +146,58 @@ img[src$="bell.svg"] {
   cursor: pointer;
 }
 
+.sm-txt-bld {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
 .md-txt-bld {
   font-size: 1.25rem;
   font-weight: 500;
 }
 
+.lg-txt-bld {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 .header-bottom {
-  border: 2px solid greenyellow;
-  background-color: beige;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.header-bottom-left {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-bottom-right {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 25px;
+}
+
+.hdr-btm-lft-txt .sm-txt-bld {
+  margin-bottom: -8px;
+}
+
+button {
+  border: none;
+  padding: 10px 22px;
+  background-color: #229D8C;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+button:hover {
+  background-color: #28B8A5;
 }
 
 main {
