@@ -220,28 +220,39 @@ main {
   grid-template-rows: 1fr auto;
 }
 
-.client-card-txt .md-txt-light {
-  line-height: 1.3rem;
-}
-
 .client-card-icons {
   display: flex;
   justify-content: flex-end;
+  gap: 20px;
 }
 
 .client-card-icons .icon {
-  margin-left: 20px;
   cursor: pointer;
 }
 
 /* announcements */
 
 .announcements-container {
-  border: 1px solid blue;
-
   grid-area: announcements;
-  margin: 30px;
-  margin-left: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  margin: 30px 30px 30px 0;
+}
+
+.announcements-grid-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 15px;
+
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px 25px 20px 25px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.announce-msg:not(.announce-msg:last-child) {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ccc;
 }
 
 /* trending */
@@ -250,12 +261,24 @@ main {
   border: 1px solid green;
 
   grid-area: trending;
-  margin: 30px;
-  margin-left: 0;
-  margin-top: 0;
+  margin: 0 30px 30px 0;
 }
 
 /* typography */
+
+.client-card-txt .md-txt-light {
+  line-height: 1.3rem;
+}
+
+.announce-msg .sm-txt-light {
+  line-height: 1rem;
+}
+
+.sm-txt-light {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #808080;
+}
 
 .md-txt-light {
   font-size: 1.1rem;
